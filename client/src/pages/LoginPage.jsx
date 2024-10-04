@@ -30,7 +30,7 @@ function LoginPage() {
       
             if (res && res.data.success) {
               localStorage.setItem("auth", JSON.stringify(res.data));
-              navigate(location.state || "/");
+              navigate("/course");
             }
           } catch (error) {
             console.log(error);

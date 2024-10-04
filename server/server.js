@@ -8,7 +8,9 @@ import {
 import connectDB from "./config/db.js";
 
 // config env
-dotenv.config();
+dotenv.config(
+  {path: './.env'}
+);
 
 // Database configuration
 connectDB();
