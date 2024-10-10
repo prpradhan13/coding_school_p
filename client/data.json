@@ -5,7 +5,32 @@
         "title": "html & css",
         "description": "djsvaj jas asd asdj jwywrb j ajjdv asdjh jasjv jasjvdja.",
         "price": 1100,
-        "time": 11
+        "time": 11,
+        "downloadPdf": "/sql-mysql(udemy_certificate).pdf",
+        "courseDetails": {
+            "defination": "What is HTML? HTML is the standard language used to create web pages. It defines the structure of a webpage using a system of elements (tags). These elements tell the browser how to display the content.",
+            "keyConcept": [{
+                "id": "html&cssKey1",
+                "concept": "Elements & Tags: HTML documents are made up of elements wrapped in tags like <html>, <body>, <p>, etc.",
+                "examples": ["<h1>This is a heading</h1>"]
+            }, 
+            {
+                "id": "html&cssKey2",
+                "concept": "Attributes: Tags can have attributes that provide additional information about an element. Common attributes include id, class, src, and href.",
+                "examples": ["<img src=\"image.jpg\" alt=\"A sample image\">"]
+            }, 
+            {
+                "id": "html&cssKey3",
+                "concept": "Headings: HTML provides six levels of headings, <h1> to <h6>, with <h1> being the most important.",
+                "examples": [""]
+            },
+            {
+                "id": "html&cssKey4",
+                "concept": "Paragraphs: The <p> tag is used to create paragraphs in HTML.",
+                "examples": [""]
+
+            }]
+        }
     },
     {
         "id": 2,

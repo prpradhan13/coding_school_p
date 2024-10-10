@@ -8,21 +8,22 @@ function SignUpPage() {
         email: "",
         password: "",
     });
-  const navigate = useNavigate();
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsLoading(true);
-    try {
+    const [showPassword, setShowPassword] = useState(false)
+    const [isLoading, setIsLoading] = useState(false);
+    const navigate = useNavigate();
+    
+    const handleChange = (e) => {
+      const { name, value } = e.target;
+      setFormData((prevData) => ({
+        ...prevData,
+        [name]: value,
+      }));
+    };
+    
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+      setIsLoading(true);
+      try {
         const res = await axios.post(
           `${import.meta.env.VITE_API_URL}/api/signup`,
           formData
@@ -37,7 +38,11 @@ function SignUpPage() {
       } finally {
         setIsLoading(false);
       }
-  };
+    };
+    
+  const togglePassword = () => {
+    setShowPassword(!showPassword);
+  }
 
   return (
     <div className='register'>
@@ -65,12 +70,15 @@ function SignUpPage() {
             <div className="input_field">
                 <label>Password</label>
                 <input 
-                    type="password"
+                    type={`${showPassword ? 'password' : 'text'}`}
                     name="password"
                     value={formData.password}
                     onChange={handleChange}
                     required
                 />
+                <button onClick={togglePassword}>
+                  {showPassword ? 'show':'hide'}
+                </button>
             </div>
 
             <button type="submit" className='btn'>

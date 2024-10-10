@@ -6,6 +6,7 @@ import SignUpPage from './pages/SignUpPage'
 import Navbar from './components/Navbar'
 import CoursePage from './pages/CoursePage'
 import CartPage from './pages/CartPage'
+import SingleCourse from './pages/SingleCourse'
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/course" element={<CoursePage />} />
+        <Route path="/singleCourse/:id" element={<SingleCourse />} />
         <Route path="/cart" element={<CartPage />} />
       </Routes>
     </BrowserRouter>

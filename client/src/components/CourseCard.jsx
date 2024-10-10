@@ -1,9 +1,11 @@
 import { useContext } from "react";
 import data from "../../data.json";
 import { CartContext } from "../context/CartContext";
+import { useNavigate } from "react-router-dom";
 
 function CourseCard() {
   const { updateCartCount } = useContext(CartContext);
+  const navigate = useNavigate()
 
   const handleCart = (i) => {
     // Get the existing items from localStorage or initialize to an empty array
@@ -17,6 +19,11 @@ function CourseCard() {
 
     // Update cart count context
     updateCartCount();
+  };
+
+  
+  const handleShowBtn = (i) => {
+    navigate(`/singleCourse/${i.id}`);
   };
 
   return (
@@ -33,6 +40,7 @@ function CourseCard() {
             <h5>Total time {i.hrs} Hrs</h5>
 
             <button onClick={() => handleCart(i)}>Add to Cart</button>
+            <button onClick={() => handleShowBtn(i)}>Watch</button>
           </div>
         </div>
       ))}

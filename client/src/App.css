@@ -125,7 +125,8 @@ li{
     padding: 3rem;
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    justify-content: space-between;
+    row-gap: 20px;
 }
 
 .card{
@@ -266,3 +267,71 @@ li{
     border-radius: 10px;
     font-weight: bold;
 }
+
+.single-course-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .course-title {
+    font-size: 2em;
+    margin-bottom: 15px;
+    text-align: center;
+    text-transform: capitalize;
+  }
+  
+  .course-description {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    /* text-align: center; */
+    font-weight: 500;
+  }
+  
+  .course-details h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  
+  .course-details ul {
+    padding-left: 20px;
+  }
+  
+  .course-details li {
+    list-style: decimal !important;
+    font-size: 1.1em;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+
+  .course-details li h4 {
+    font-weight: 600;
+  }
+
+  .course-details li p {
+    font-weight: 600;
+    margin: 5px 10px;
+  }
+  
+  .download-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    margin: 20px auto;
+    display: block;
+  }
+  
+  .download-btn:hover {
+    background-color: #0056b3;
+  }
+  
